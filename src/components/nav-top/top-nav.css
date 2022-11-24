@@ -120,3 +120,78 @@
 .language{
     margin: 0px 8px;
 }
+.react-multi-carousel-list{
+    height: 80px;
+   
+}
+.react-multi-carousel-item {
+   
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+.react-multiple-carousel__arrow:hover {
+   background-color: white;
+}
+.react-multiple-carousel__arrow::before {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    display: block;
+    font-family: revicons;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+.react-multiple-carousel__arrow {
+    position: absolute;
+    outline: 0;
+    transition: all .1s;
+    border-radius: 35px;
+    z-index: 1000;
+    margin: -20px;
+    border: 0;
+    background: white;
+    min-width: 30px;
+    min-height: 29px;
+    opacity: 1;
+    cursor: pointer;
+    border: 1px solid #C3C3C3;
+}
+.carusol_filter_item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.carusol_filter_item i {
+    color: #7a7a7a;
+}
+.carusol_filter_item p {
+    color: #969696;
+}
+
+.FilterMenu{
+    height: 50px;
+    width: 90px;
+    margin: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: -10px;
+    border: 1px solid #DDDDDD;
+}
+.FilterMenu p {
+ margin: 0px 0px 0px 0px;
+font-size: 14px;
+ padding-left: 5px;
+}
+/* .css-1t1j96h-MuiPaper-root-MuiDialog-paper{
+    height: 800px;
+} */
+
+

@@ -1,12 +1,28 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState} from 'react'
 
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+
+
+
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Slide from '@mui/material/Slide';
 import Box from '@mui/material/Box';
+
+
 
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
+
 
 import Tooltip from '@mui/material/Tooltip';
 
@@ -16,11 +32,29 @@ import searchicon from '../nav-top/search-icon.png'
 
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import MenuIcon from '@mui/icons-material/Menu';
+import TuneIcon from '@mui/icons-material/Tune';
 
 import LanguageIcon from '@mui/icons-material/Language';
 
 import '../nav-top/top-nav.css'
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
+
 function TopNav() {
+
+
+  
+    const [modal, setmodal] = React.useState(false);
+  
+    const handleClickOpen = () => {
+      setmodal(true);
+    };
+  
+    const handleCloseModal = () => {
+      setmodal(false);
+    };
 
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -33,11 +67,25 @@ function TopNav() {
     setAnchorEl(null);
   };
 
-const expandSearch =(e)=>{
-
-
-  
-  }
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 20
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 14
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 8
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 3
+    }
+  };
  
 
   return (
@@ -48,7 +96,7 @@ const expandSearch =(e)=>{
       <img className='logo' src={airbnb_logo}/>
       </div>
       <div className='center-nav'>
-        <div onClick={expandSearch} className='SearchFilter'>
+        <div  className='SearchFilter'>
           <p>Anywhere</p>
           <p>Any week</p>
           <p className='p2'>Add guests
@@ -82,9 +130,201 @@ const expandSearch =(e)=>{
 
     </div>
     </div>
-     <div>
-    
+  <div className='container-fluid' >
+  <div className='row'>
+    <div className='col-sm-12 col-md-10 col-lg-11 col-xl-11'
+    >   <Carousel responsive={responsive}>
+
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+  <div className='carusol_filter_item'>
+    <i>
+    <LanguageIcon/>
+    </i>
+    <p>Park</p>
+  </div>
+
+
+
+  </Carousel>
+  </div>
+
+  
+<div className='col-sm-12 col-md-2 col-lg-1 col-xl-1'>
+<div onClick={handleClickOpen} className='FilterMenu'>
+  <i><TuneIcon/></i>
+  <p>Filters</p>
+
+
+</div>
+</div>
+</div>
+
    </div>
+   <div>
+   <Dialog
+        open={modal}
+        TransitionComponent={Transition}
+        keepMounted
+        onClose={handleCloseModal}
+        aria-describedby="alert-dialog-slide-description"
+      >
+        <DialogTitle>{}</DialogTitle>
+        <DialogContent
+        sx={{
+          height: 800
+   
+        }}>
+          <DialogContentText id="alert-dialog-slide-description">
+          <h3>Price range</h3>
+          <p>The average nightly price is $226</p>
+          <div className='d-flex justify-content-around'>
+          <input/>
+          <p>-</p>
+          <input/>
+          </div>
+          
+
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Disagree</Button>
+          <Button onClick={handleClose}>Agree</Button>
+        </DialogActions>
+      </Dialog>
+      </div>
+      
+
 
   
 
