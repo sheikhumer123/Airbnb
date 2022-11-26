@@ -1,0 +1,180 @@
+.SignUpNav{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #EEEEEE ;
+    height: 90px;
+    align-items: center;
+    padding: 0px 200px 0px 200px;
+}
+.SignUpNav img{
+    cursor: pointer;
+}
+.navMenu{
+    margin: 0px 5px;
+    border-radius: 50px;
+    height: 45px ;
+    width: 80px;
+    border: 1px solid #DDDD;
+    background-color: white;
+
+}
+.ForMobile{
+    display: none;
+}
+.SignUpNavRight{
+    display: flex;
+    
+}
+.bnbButton{
+    background-color: white ;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-weight: 500;
+    align-items: flex-start;
+}
+.bnbButton:hover{
+    background-color: #F7F7F7;
+}
+.language{
+    padding: 10px;
+    margin: 0px 8px;
+    border: none;
+    border-radius: 50px;
+    background-color: white;
+    font-size: 10px;
+}
+.language:hover{
+    background-color: #F7F7F7;
+}
+.LoginPageBody{
+    display: flex;
+    justify-content: center;
+}
+.LoginForm{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 566px;
+    border: 1px solid #B0B0B0 ;
+    border-radius: 10px;
+    padding-bottom: 40px;
+ 
+    
+}
+.loginFormHead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px 5px 0px;
+    border-bottom: 1px solid #EBEBEB;
+}
+.loginFormHead p {
+    font-weight: bold;
+}
+.LoginFormBody{
+    padding: 30px 30px 0px 30px;
+}
+.LoginFormInput{
+    height: 60px;
+    border: 1px solid #B0B0B0 ;
+    margin-top: 10px;
+}
+.LoginBtnForm{
+    width: 100%;
+    background-color: #FF385C;
+    height: 55px;
+    color: white;
+    font-weight: bold;
+    transition: all 0.6s;
+    border-radius: 10px;
+}
+.LoginBtnForm:hover{
+    background-color: #da1337;
+    color: white;
+}
+.hrDivider{
+    position: relative;
+    margin-top: 10px;
+}
+.hrDivider p {
+    position: absolute;
+    right: 48%;
+    top: 7%;
+    background-color: white;
+    padding: 0px 10px;
+}
+.LoginConnection{
+    margin-top: 15px;
+    border: 1px solid black;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.LoginConnection:hover{
+    background-color: #ebebeb ;
+
+}
+.LoginConnection p{
+    margin-top: 15px;
+}
+.connectionIcon{
+
+    height: 22px;
+    width: 22px;
+    border-radius: 50px;
+    background-color: red;
+    position: absolute;
+    left: 20px;
+    background-image: url('');
+}
+.LoginTerm p {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 743px) {
+    .SignUpNav img{
+        display: none;
+         }
+    .LoginForm{
+        width: 100% !important;
+        border: none;
+        padding: 0 ;
+    }
+    .SignUpNavRight{
+        display: none;
+    }
+    .ForMobile{
+        display:block;
+        margin-top: 12px;
+        font-weight: bold;
+        width: 200%;
+        text-align: center;
+
+    }
+    .SignUpNav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        padding: 0px;
+    }
+    .loginFormHead p {
+        display: none;
+    }
+    .loginFormHead{
+        border: none;
+        padding: 0px 0px;
+    }
+    .LoginForm{
+        margin-top: 10px;
+    }
+ 
+
+  }

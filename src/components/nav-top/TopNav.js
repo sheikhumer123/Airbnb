@@ -22,6 +22,7 @@ import MenuItem from '@mui/material/MenuItem';
 
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 
 
 import Tooltip from '@mui/material/Tooltip';
@@ -37,6 +38,7 @@ import TuneIcon from '@mui/icons-material/Tune';
 import LanguageIcon from '@mui/icons-material/Language';
 
 import '../nav-top/top-nav.css'
+
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -299,19 +301,79 @@ function TopNav() {
         onClose={handleCloseModal}
         aria-describedby="alert-dialog-slide-description"
       >
-        <DialogTitle>{}</DialogTitle>
+        <DialogTitle   sx={{
+
+          padding: '20px 10px',
+
+        }} >   <div className='filterTop'>
+            <i><CloseIcon sx={{
+              fontSize: 20,
+            }}/></i><h5>Filters</h5>
+            
+          </div>
+          </DialogTitle>
         <DialogContent
         sx={{
-          height: 800
+          height: 800,
+          padding: 0,
+          width : 600,
+          borderTop: '1px solid #EBEBEB;'
+          
    
         }}>
           <DialogContentText id="alert-dialog-slide-description">
-          <h3>Price range</h3>
-          <p>The average nightly price is $226</p>
-          <div className='d-flex justify-content-around'>
-          <input/>
-          <p>-</p>
-          <input/>
+       
+          <div className='container'>
+            <div className='row'>
+              <div className='col-12 mt-4 PriceRange'>
+                <h5>Price Range</h5>
+                <p>The average nightly price is $408</p>
+                <div className='row'>
+                  <div className='col-6 priceFormControl'>
+                  <p>mix price</p>
+                    <h6>$</h6>
+                  <input type="number" className='form-control priceForm '/>
+                  </div>
+                  <div className='col-6 priceFormControl'>
+                  <p>max price</p>
+                    <h6>$</h6>
+                  <input type="number" className='form-control priceForm'/>
+                </div>
+                </div>
+
+              </div>
+              <div className='col-12 mt-4 TypesOfPeople mt-5 '>
+                <h5>Types of Place</h5>
+               
+                <div className='row'>
+                  <div className='col-6 '>
+                  <div class="form-check-inline">
+                 <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" value=""/>Entire place
+                  </label>
+                   </div>
+                  </div>
+                  <div className='col-6 '>
+                  <div class="form-check-inline">
+                 <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" value=""/>Private room
+                 </label>
+                  </div>
+                </div>
+                </div>
+                <div className='row'>
+                  <div className='col-12 '>
+                  <div class="form-check-inline">
+                 <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" value=""/>Entire place
+                  </label>
+                   </div>
+                  </div>
+           
+                </div>
+
+              </div>
+            </div>        
           </div>
           
 
