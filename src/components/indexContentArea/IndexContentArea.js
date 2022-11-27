@@ -8,110 +8,81 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import hotelimg1 from "../indexContentArea/2.jpg";
 import hotelimg2 from "../indexContentArea/3.jpg";
 
+//
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+
 //images
 
 function IndexContentArea() {
-  const [clicked, setClicked] = useState(false);
+  //
+
+  //
+  const [clicks, setClicks] = useState([]);
+  //add the id to the array of clicked items if it doesn't exist but if it does exist remove it. this makes sure that double clicking on an item brings it back to normal
   const handleIconClick = (id) => {
-    setClicked(true);
+    let result = clicks.includes(id)
+      ? clicks.filter((click) => click != id)
+      : [...clicks, id];
+    setClicks(result);
+    // change <AddCircleIcon /> to <BlockIcon /> at "id"
   };
 
   return (
     <>
       <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
         <div className="HotelCard">
-          <i onClick={() => handleIconClick(101)}>
-            {clicked ? <FavoriteBorderIcon /> : <FavoriteIcon />}
+          <i className="LikeButton" onClick={() => handleIconClick(101)}>
+            {clicks.includes(101) ? (
+              <FavoriteIcon
+                sx={{
+                  fontSize: "25px",
+                  color: "red",
+                }}
+              />
+            ) : (
+              <FavoriteBorderIcon
+                sx={{
+                  fontSize: "25px",
+                  color: "white",
+                }}
+              />
+            )}
           </i>
 
           <div className="HotelCardCarosuol">
-            <div
-              id="carouselExampleIndicators"
-              class="carousel slide carusoulSider"
-              data-ride="false"
-            >
-              <ol class="carousel-indicators">
-                <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="0"
-                  class="active"
-                ></li>
-                <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="1"
-                ></li>
-                <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="2"
-                ></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    class="d-block carosuolImage"
-                    src={hotelimg1}
-                    alt="First slide"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    class="d-block carosuolImage"
-                    src={hotelimg2}
-                    alt="Second slide"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    class="d-block carosuolImage"
-                    src={hotelimg1}
-                    alt="Third slide"
-                  />
-                </div>
+            <Carousel showThumbs="false">
+              <div>
+                <img src={hotelimg1} />
               </div>
-              <a
-                class="carousel-control-prev"
-                href="#carouselExampleIndicators"
-                role="button"
-                data-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a
-                class="carousel-control-next"
-                href="#carouselExampleIndicators"
-                role="button"
-                data-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
+              <div>
+                <img src={hotelimg2} />
+              </div>
+            </Carousel>
           </div>
 
           <div className="d-flex justify-content-between mt-1">
             <h6>
               <b>Emporio Greece</b>
             </h6>
-            <p className="d-flex">
-              <StarRateIcon />
+            <p
+              style={{
+                fontSize: "13px",
+              }}
+              className="d-flex"
+            >
+              <StarRateIcon sx={{ fontSize: 15, margin: "2px 2px 0px 0px" }} />
               4.97
             </p>
           </div>
           <div className="d-flex flex-column HotelCardInfo ">
-            <p style={{ fontSize: 15 }}>4,311 kilometers away</p>
-            <p style={{ fontSize: 15 }}>Mar 29 - Apr 5</p>
+            <p style={{ fontSize: 14 }}>4,311 kilometers away</p>
+            <p style={{ fontSize: 14 }}>Mar 29 - Apr 5</p>
             <div className="d-flex">
-              <p>
+              <p style={{ color: "black" }}>
                 <b>$295</b>
               </p>
-              <p style={{ marginLeft: 3 }}>night</p>
+              <p style={{ marginLeft: 3, color: "black" }}>night</p>
             </div>
           </div>
         </div>

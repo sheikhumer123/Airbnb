@@ -1,245 +1,229 @@
-.NavHeader{
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
-    border-bottom: 1px solid #EBEBEB;
+.NavHeader {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid #ebebeb;
 
-    overflow: hidden;
-    max-height: 80px;
-    flex-wrap: wrap;
-
+  overflow: hidden;
+  max-height: 80px;
+  flex-wrap: wrap;
 }
-.NavHeaderExpand{
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
-    border-bottom: 1px solid #EBEBEB;
-    max-height: 150px;
-    transition: all 4s;
-    flex-wrap: wrap;
- 
-  
+.NavHeaderExpand {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid #ebebeb;
+  max-height: 150px;
+  transition: all 4s;
+  flex-wrap: wrap;
 }
-.logo{
+.logo {
   height: 60px;
   margin: 10px 20px;
 }
-.SearchFilter{
-    display: flex;
+.SearchFilter {
+  display: flex;
 
-    height: 50px;
-    width: 370px;
-    border-radius: 50px;
-    border: 1px solid #DDDD;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-   
+  height: 50px;
+  width: 370px;
+  border-radius: 50px;
+  border: 1px solid #dddd;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
-.SearchFilterHide{
-    display: none !important;
+.SearchFilterHide {
+  display: none !important;
 }
-.expandedArea{
-    flex: 100%;
-    height: 100px;
-    background-color: red;
-    width: 100vw;
-   
+.expandedArea {
+  flex: 100%;
+  height: 100px;
+  background-color: red;
+  width: 100vw;
 }
 
-.SearchFilter p{
-    padding-right: 12px;
-    margin: 0px 10px;
-    font-size: 15px;
-    font-weight: 500;
-    border-right: 1px solid #DDDD;
+.SearchFilter p {
+  padding-right: 12px;
+  margin: 0px 10px;
+  font-size: 15px;
+  font-weight: 500;
+  border-right: 1px solid #dddd;
+}
+.p2 {
+  border-right: none !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  color: #9f9f9f !important;
+}
+.SearchIcon {
+  height: 33px;
+}
+.HomeButton {
+  background-color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: 500;
+  align-items: flex-start;
+}
+.HomeButton:hover {
+  background-color: #f7f7f7;
+}
+.language {
+  padding: 5px;
 
+  border-radius: 50px;
 }
-.p2{
-    border-right: none !important;
-    font-size: 15px !important;
-    font-weight: 400 !important;
-    color: #9F9F9F !important;
+.language:hover {
+  background-color: #f7f7f7;
 }
-.SearchIcon{
-
-    height: 33px;
+.navMenu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0px 5px;
+  border-radius: 50px;
+  height: 45px;
+  width: 80px;
+  border: 1px solid #dddd;
 }
-.HomeButton{
-    background-color: white ;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 50px;
-    font-weight: 500;
-    align-items: flex-start;
-}
-.HomeButton:hover{
-    background-color: #F7F7F7;
-}
-.language{
-    padding: 5px;
-    
-    border-radius: 50px;
-}
-.language:hover{
-    background-color: #F7F7F7;
-}
-.navMenu{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 0px 5px;
-    border-radius: 50px;
-    height: 45px ;
-    width: 80px;
-    border: 1px solid #DDDD;
-
-}
-.right-nav{
-   
-    flex: 1;
-    display: flex;
+.right-nav {
+  flex: 1;
+  display: flex;
   justify-content: flex-end;
-    align-items: center;
+  align-items: center;
 }
-.left-nav{
-   
-    flex: 1;
+.left-nav {
+  flex: 1;
 }
-.center-nav{
-  
-    flex: 1;
-    display: flex;
-    align-content: center;
-    justify-content: center;
+.center-nav {
+  flex: 1;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
-.HomeButton{
-   margin: 0px 8px;
+.HomeButton {
+  margin: 0px 8px;
 }
-.language{
-    margin: 0px 8px;
+.language {
+  margin: 0px 8px;
 }
-.react-multi-carousel-list{
-    height: 80px;
-   
+.react-multi-carousel-list {
+  height: 80px;
 }
 .react-multi-carousel-item {
-   
-    display: flex;
-    justify-content: center;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 }
 .react-multiple-carousel__arrow:hover {
-   background-color: white;
+  background-color: white;
 }
 .react-multiple-carousel__arrow::before {
-    font-size: 14px;
-    font-weight: bold;
-    color: black;
-    display: block;
-    font-family: revicons;
-    text-align: center;
-    z-index: 2;
-    position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  display: block;
+  font-family: revicons;
+  text-align: center;
+  z-index: 2;
+  position: relative;
 }
 .react-multiple-carousel__arrow {
-    position: absolute;
-    outline: 0;
-    transition: all .1s;
-    border-radius: 35px;
-    z-index: 1000;
-    margin: -20px;
-    border: 0;
-    background: white;
-    min-width: 30px;
-    min-height: 29px;
-    opacity: 1;
-    cursor: pointer;
-    border: 1px solid #C3C3C3;
+  position: absolute;
+  outline: 0;
+  transition: all 0.1s;
+  border-radius: 35px;
+  z-index: 1000;
+  margin: -20px;
+  border: 0;
+  background: white;
+  min-width: 30px;
+  min-height: 29px;
+  opacity: 1;
+  cursor: pointer;
+  border: 1px solid #c3c3c3;
 }
-.carusol_filter_item{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+.carusol_filter_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 .carusol_filter_item i {
-    color: #7a7a7a;
+  color: #7a7a7a;
 }
 .carusol_filter_item p {
-    color: #969696;
+  color: #7e7d7d;
+  font-size: 12px;
 }
 
-.FilterMenu{
-    height: 50px;
-    width: 90px;
-    margin: 15px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    margin-left: -10px;
-    border: 1px solid #DDDDDD;
+.FilterMenu {
+  height: 50px;
+  width: 90px;
+  margin: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: -10px;
+  border: 1px solid #dddddd;
 }
 .FilterMenu p {
- margin: 0px 0px 0px 0px;
-font-size: 15px;
- padding-left: 5px;
+  margin: 0px 0px 0px 0px;
+  font-size: 15px;
+  padding-left: 5px;
 }
-.filterTop h5{
- text-align: center;
-font-weight: bold;
-font-size: 15px;
-
+.filterTop h5 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
 }
-.filterTop{
-    position: relative;
-  
+.filterTop {
+  position: relative;
 }
 .filterTop i {
-    position: absolute;
-    top: -6px;
-    left: 10px;
-    
+  position: absolute;
+  top: -6px;
+  left: 10px;
 }
-.priceForm{
-    border-radius: 10px;
+.priceForm {
+  border-radius: 10px;
 
-    height: 50px;
-  
-    padding: 7px 0px 0px 25px;
-    font-size: 15px;
+  height: 50px;
+
+  padding: 7px 0px 0px 25px;
+  font-size: 15px;
 }
-.priceForm:focus{
-    border: 2px solid black;
-    box-shadow: none;
-  
+.priceForm:focus {
+  border: 2px solid black;
+  box-shadow: none;
 }
-.priceFormControl{
-    position: relative;
+.priceFormControl {
+  position: relative;
 }
 .priceFormControl p {
-    position: absolute;
-    top: 4px;
-    left: 30px;
-    font-size: 11px;
+  position: absolute;
+  top: 4px;
+  left: 30px;
+  font-size: 11px;
 }
 .priceFormControl h6 {
-    position: absolute;
-    top: 20px;
-    left: 30px;
-    font-size: 15px;
-    color: black;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 15px;
+  color: black;
 }
-.PriceRange h5{
-    color: black;
-    font-weight: 600;
+.PriceRange h5 {
+  color: black;
+  font-weight: 600;
 }
-.TypesOfPeople h5{
-    color: black;
-    font-weight: 600;
+.TypesOfPeople h5 {
+  color: black;
+  font-weight: 600;
 }
